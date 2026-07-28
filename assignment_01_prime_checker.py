@@ -35,3 +35,29 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+# =============================================================================
+# PROGRAMMING FUNDAMENTALS — Assignment 1
+# Topic: Conditional Logic, Loops, and Functions
+# =============================================================================
+
+def is_prime(number):
+    """Return True if the number is prime, otherwise False."""
+
+    if number < 2:
+        return False
+
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+# Main program
+number = int(input("Enter a number: "))
+
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is NOT a prime number.") 
+  
